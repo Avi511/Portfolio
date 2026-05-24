@@ -11,12 +11,40 @@ export default function ProjectsSection() {
       id: "02",
       client: "Pixel Forge",
       images: ["/project3.png", "/project2.png"]
+    },
+    {
+      id: "03",
+      client: "Nova Dynamics",
+      images: ["/project1.png", "/project3.png"]
+    },
+    {
+      id: "04",
+      client: "Zenith AI",
+      images: ["/project2.png", "/project4.png"]
+    },
+    {
+      id: "05",
+      client: "Quantum Labs",
+      images: ["/project4.png", "/project2.png"]
+    },
+    {
+      id: "06",
+      client: "Echelon Agency",
+      images: ["/project3.png", "/project1.png"]
     }
   ];
 
   return (
     <section className="relative w-full flex flex-col items-center pt-32 pb-[50vh] px-4 md:px-8 bg-black text-white">
-      <div className="relative w-full max-w-6xl flex flex-col gap-32 md:gap-64">
+      <div className="relative w-full max-w-6xl flex flex-col gap-32 md:gap-40">
+        
+        {/* Section Title */}
+        <div className="w-full text-center">
+          <h2 className="text-[4rem] md:text-[8rem] font-black uppercase tracking-tighter drop-shadow-2xl leading-none">
+            PROJECTS
+          </h2>
+        </div>
+
         {projects.map((project, index) => (
           <div 
             key={project.id}
