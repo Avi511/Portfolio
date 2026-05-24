@@ -1,11 +1,12 @@
 "use client";
 
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker 
+  FaHtml5, FaCss3Alt, FaJs, FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker, FaLinux 
 } from "react-icons/fa";
 import { 
-  SiTypescript, SiPhp, SiC, SiNextdotjs, SiSpringboot, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiVisualstudiocode 
+  SiTypescript, SiPhp, SiC, SiNextdotjs, SiSpringboot, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiPostman 
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import { useRef, useState, useEffect } from "react";
 
 export default function SkillsSection() {
@@ -14,38 +15,44 @@ export default function SkillsSection() {
 
   const skillCategories = [
     {
-      title: "Languages",
+      id: "01",
+      title: "Frontend Ecosystem",
       skills: [
-        { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
-        { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
-        { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-        { name: "PHP", icon: SiPhp, color: "#777BB4" },
-        { name: "Java", icon: FaJava, color: "#ED8B00" },
-        { name: "C Programming", icon: SiC, color: "#A8B9CC" },
+        { name: "HTML5", icon: FaHtml5, color: "#E34F26", level: 95 },
+        { name: "CSS3", icon: FaCss3Alt, color: "#1572B6", level: 90 },
+        { name: "JavaScript", icon: FaJs, color: "#F7DF1E", level: 90 },
+        { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 85 },
+        { name: "React", icon: FaReact, color: "#61DAFB", level: 90 },
+        { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF", level: 85 },
+        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 90 },
       ]
     },
     {
-      title: "Frameworks",
+      id: "02",
+      title: "Backend & Database",
       skills: [
-        { name: "React", icon: FaReact, color: "#61DAFB" },
-        { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-        { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-        { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
-        { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
-        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+        { name: "Java", icon: FaJava, color: "#ED8B00", level: 80 },
+        { name: "PHP", icon: SiPhp, color: "#777BB4", level: 70 },
+        { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F", level: 75 },
+        { name: "Node.js", icon: FaNodeJs, color: "#339933", level: 80 },
+        { name: "Express.js", icon: SiExpress, color: "#FFFFFF", level: 75 },
+        { name: "C Programming", icon: SiC, color: "#A8B9CC", level: 70 },
+        { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 80 },
+        { name: "MySQL", icon: SiMysql, color: "#4479A1", level: 85 },
+        { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", level: 75 },
       ]
     },
     {
-      title: "Database & Tools",
+      id: "03",
+      title: "Tools & Architecture",
       skills: [
-        { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-        { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-        { name: "Git", icon: FaGitAlt, color: "#F05032" },
-        { name: "GitHub", icon: FaGithub, color: "#FFFFFF" },
-        { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
-        { name: "Figma", icon: FaFigma, color: "#F24E1E" },
-        { name: "Docker", icon: FaDocker, color: "#2496ED" },
+        { name: "Git", icon: FaGitAlt, color: "#F05032", level: 90 },
+        { name: "GitHub", icon: FaGithub, color: "#FFFFFF", level: 90 },
+        { name: "VS Code", icon: VscVscode, color: "#007ACC", level: 85 },
+        { name: "Figma", icon: FaFigma, color: "#F24E1E", level: 80 },
+        { name: "Docker", icon: FaDocker, color: "#2496ED", level: 75 },
+        { name: "Postman", icon: SiPostman, color: "#FF6C37", level: 90 },
+        { name: "Linux", icon: FaLinux, color: "#FCC624", level: 75 },
       ]
     }
   ];
@@ -62,8 +69,8 @@ export default function SkillsSection() {
         const progress = currentScroll / totalScrollable;
         const track = container.querySelector(".horizontal-track");
         if (track) {
-          const maxTranslate = track.scrollWidth - window.innerWidth;
-          // Translate left (negative translateX) as we scroll down
+          const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
+          // Translate left as we scroll down
           setTranslateX(-progress * maxTranslate);
         }
       } else if (currentScroll < 0) {
@@ -71,7 +78,7 @@ export default function SkillsSection() {
       } else {
         const track = container.querySelector(".horizontal-track");
         if (track) {
-          const maxTranslate = track.scrollWidth - window.innerWidth;
+          const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
           setTranslateX(-maxTranslate);
         }
       }
@@ -89,60 +96,86 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="relative w-full bg-transparent overflow-visible">
-      <div ref={sectionRef} className="relative h-[250vh] w-full bg-transparent">
-        {/* Sticky viewport container */}
-        <div className="sticky top-0 h-screen w-full flex flex-col justify-center overflow-hidden">
+      <div ref={sectionRef} className="relative h-[220vh] w-full bg-transparent">
+        {/* Sticky viewport container - starts aligned to left to prevent initial clipping */}
+        <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-start overflow-hidden px-6 md:px-20">
           
-          {/* Header */}
-          <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 text-center z-10">
-            <h2 className="text-[3.5rem] md:text-[6rem] font-black uppercase tracking-tighter drop-shadow-2xl leading-none text-center">
-              MY SKILLS
-            </h2>
-          </div>
-
-          {/* Horizontal Track container */}
+          {/* Main Arsenal Container (Tech Arsenal box) */}
           <div 
-            className="horizontal-track flex flex-row items-center gap-16 md:gap-32 px-12 md:px-24 w-max"
+            className="horizontal-track flex flex-col gap-6 md:gap-8 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-blue-500/20 bg-[#07080b]/70 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
             style={{ 
               transform: `translateX(${translateX}px)`,
               transition: 'transform 0.1s ease-out'
             }}
           >
-            {skillCategories.map((category, catIndex) => (
-              <div key={catIndex} className="flex flex-col items-start shrink-0 pr-12 md:pr-24">
-                <h3 className="text-2xl md:text-4xl font-black tracking-tight mb-8 md:mb-12 text-white/90 border-l-4 md:border-l-8 border-blue-500 pl-4 md:pl-6 uppercase">
-                  {category.title}
-                </h3>
-                
-                <div className="flex flex-row gap-4 md:gap-6">
-                  {category.skills.map((skill, index) => {
-                    const Icon = skill.icon;
-                    return (
-                      <div 
-                        key={index}
-                        className="group relative flex flex-col items-center justify-center p-4 w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-2xl md:rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:bg-white/[0.08] hover:border-white/15 transition-all duration-300 cursor-pointer shadow-lg hover:-translate-y-2 shrink-0"
-                      >
-                        {/* Ambient hover glow inside the card matching brand color */}
+            {/* Title inside the container */}
+            <div className="flex flex-col px-4 mb-2">
+              <h2 className="text-[3rem] md:text-[5rem] font-black uppercase tracking-tighter leading-none text-white drop-shadow-2xl">
+                Tech Arsenal
+              </h2>
+            </div>
+
+            {/* Categories stack inside the main container */}
+            <div className="flex flex-col gap-8 md:gap-10">
+              {skillCategories.map((category, catIndex) => (
+                <div key={catIndex} className="flex flex-col gap-4 px-4 shrink-0">
+                  {/* Category Header */}
+                  <div className="flex items-center gap-4 w-full">
+                    <span className="text-[10px] md:text-xs font-mono font-bold text-blue-400 tracking-widest">{category.id}</span>
+                    <h3 className="text-xs md:text-sm font-bold tracking-[0.2em] text-white/80 uppercase shrink-0">
+                      {category.title}
+                    </h3>
+                    <div className="h-[1px] bg-white/10 flex-grow min-w-[200px]" />
+                  </div>
+                  
+                  {/* Horizontal Cards Row */}
+                  <div className="flex flex-row gap-4 md:gap-6">
+                    {category.skills.map((skill, index) => {
+                      const Icon = skill.icon;
+                      return (
                         <div 
-                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl md:rounded-3xl pointer-events-none"
-                          style={{
-                            background: `radial-gradient(circle, ${skill.color}15 0%, transparent 70%)`
-                          }}
-                        />
-                        
-                        <div className="relative z-10 mb-2 md:mb-4 text-2xl sm:text-3xl md:text-5xl transition-transform duration-300 group-hover:scale-110" style={{ color: skill.color }}>
-                          <Icon />
+                          key={index}
+                          className="group relative flex flex-col justify-between p-4 md:p-5 w-44 h-24 sm:w-48 sm:h-26 md:w-56 md:h-30 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-300 cursor-pointer shadow-lg hover:-translate-y-1 shrink-0 overflow-hidden"
+                        >
+                          {/* Ambient glow matching brand color */}
+                          <div 
+                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                            style={{
+                              background: `radial-gradient(circle at 10% 10%, ${skill.color}15 0%, transparent 60%)`
+                            }}
+                          />
+                          
+                          {/* Top: Icon & Name */}
+                          <div className="flex items-center gap-3">
+                            <div className="text-2xl sm:text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110 shrink-0" style={{ color: skill.color }}>
+                              <Icon />
+                            </div>
+                            <span className="text-xs sm:text-sm md:text-base font-bold text-white tracking-wide truncate">{skill.name}</span>
+                          </div>
+
+                          {/* Bottom: Skill level bar */}
+                          <div className="flex flex-col gap-1 w-full mt-auto">
+                            <div className="flex justify-between items-center text-[8px] sm:text-[9px] md:text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                              <span>Skill Level</span>
+                              <span style={{ color: skill.color }}>{skill.level}%</span>
+                            </div>
+                            <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                              <div 
+                                className="h-full rounded-full transition-all duration-1000" 
+                                style={{ 
+                                  width: `${skill.level}%`, 
+                                  backgroundColor: skill.color 
+                                }}
+                              />
+                            </div>
+                          </div>
                         </div>
-                        
-                        <span className="relative z-10 text-[10px] sm:text-xs md:text-sm font-bold text-gray-400 group-hover:text-white transition-colors duration-300 text-center uppercase tracking-wider">
-                          {skill.name}
-                        </span>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
