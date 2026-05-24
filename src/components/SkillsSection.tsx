@@ -11,7 +11,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-black text-white overflow-hidden">
+    <section id="skills" className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-black text-white overflow-hidden">
       <div className="relative z-10 flex flex-col items-center w-full max-w-6xl">
         <h2 className="text-[4rem] md:text-[8rem] font-black uppercase tracking-tighter mb-16 drop-shadow-2xl leading-none text-center">
           MY SKILLS

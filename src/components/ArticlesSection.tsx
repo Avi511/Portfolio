@@ -36,7 +36,7 @@ export default function ArticlesSection() {
   const marqueeItems = [...articles, ...articles, ...articles, ...articles];
 
   return (
-    <section className="relative w-full flex flex-col items-center py-32 bg-black text-white overflow-hidden">
+    <section id="articles" className="relative w-full flex flex-col items-center py-32 bg-black text-white overflow-hidden">
       <div className="w-full text-center mb-20 relative z-10">
         <h2 className="text-[3rem] md:text-[6rem] font-black uppercase tracking-tighter drop-shadow-2xl flex items-center justify-center gap-4">
           ARTICLES <span className="text-[3rem] md:text-[5rem]">😍</span>

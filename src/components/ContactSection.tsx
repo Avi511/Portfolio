@@ -1,6 +1,6 @@
 export default function ContactSection() {
   return (
-    <section className="relative w-full min-h-screen bg-white text-black py-32 px-6 overflow-hidden rounded-t-[3rem] -mt-[3rem] z-20">
+    <section id="contact" className="relative w-full min-h-screen bg-white text-black py-32 px-6 overflow-hidden rounded-t-[3rem] -mt-[3rem] z-20">
       
       <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center h-full pt-10">
         

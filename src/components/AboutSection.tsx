@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-black overflow-hidden">
+    <section id="about" className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-black overflow-hidden">
       
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl px-4">
@@ -10,12 +10,12 @@ export default function AboutSection() {
           ABOUT ME
         </h2>
         
-        <p className="text-lg md:text-2xl text-gray-200 font-semibold leading-relaxed md:leading-10 mb-16 drop-shadow-md max-w-3xl">
-          With over five years of experience in design,<br className="hidden md:block"/>
-          I specialize in branding, web design, and user experience.<br className="hidden md:block"/>
-          I love collaborating with businesses that want to stand out<br className="hidden md:block"/>
-          and showcase their best side.<br className="hidden md:block"/>
-          Let's create something amazing together!
+        <p className="text-lg md:text-2xl text-gray-200 font-semibold leading-relaxed md:leading-10 mb-16 drop-shadow-md max-w-4xl mx-auto">
+          I'm Avishka Ishan Medagamagodage, a third-year Software Engineering<br className="hidden md:block"/>
+          undergraduate at the University of Kelaniya. I am from Kandy.<br className="hidden md:block"/>
+          I'm passionate about coding and constantly exploring new areas<br className="hidden md:block"/>
+          in software development. I’m particularly interested in<br className="hidden md:block"/>
+          Full-Stack development and aspire to become a software engineer.
         </p>
         
         <button className="relative px-12 py-5 rounded-full bg-black text-white font-bold tracking-widest uppercase overflow-hidden group hover:scale-105 transition-transform duration-300">

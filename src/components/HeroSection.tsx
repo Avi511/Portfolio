@@ -24,16 +24,6 @@ export default function HeroSection() {
         ></iframe>
       </div>
 
-      {/* Right Contact Button */}
-      <div className="absolute right-[15%] top-[55%] z-30">
-        <button className="relative px-8 py-4 rounded-full bg-black border border-white/20 text-white font-bold tracking-widest uppercase overflow-hidden group hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 opacity-60 blur-md group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div className="absolute inset-[1px] bg-black rounded-full z-0"></div>
-          <span className="relative z-10 text-sm drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
-            Contact Me
-          </span>
-        </button>
-      </div>
 
     </div>
   );
