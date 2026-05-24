@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center pt-10">
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center pt-10 bg-transparent">
 
       {/* Huge Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">

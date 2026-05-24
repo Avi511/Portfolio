@@ -29,13 +29,13 @@ export default function ProjectsSection() {
     },
     {
       id: "06",
-      client: "Echelon Agency",
+      client: "Personal Portfolio",
       images: ["/project3.png", "/project1.png"]
     }
   ];
 
   return (
-    <section id="projects" className="relative w-full flex flex-col items-center pt-32 pb-[50vh] px-4 md:px-8 bg-black text-white">
+    <section id="projects" className="relative w-full flex flex-col items-center pt-32 pb-[50vh] px-4 md:px-8 bg-transparent text-white">
       <div className="relative w-full max-w-6xl flex flex-col gap-32 md:gap-40">
         
         {/* Section Title */}

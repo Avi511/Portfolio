@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen w-full bg-black flex flex-col font-outfit">
       {/* Background Glow */}
-      <div className="glow-bg opacity-40"></div>
+      <div className="glow-bg"></div>
 
       <Navbar />
 

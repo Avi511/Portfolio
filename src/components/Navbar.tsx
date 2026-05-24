@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shrink-0 shadow-lg shadow-white/10">
           <Scan className="w-5 h-5 text-black" />
         </div>
-        <span className="text-white text-xl font-bold tracking-tight hidden sm:block">echelon</span>
+        <span className="text-white text-xl font-bold tracking-tight hidden sm:block">Avishka Ishan</span>
       </Link>
       
       <div className="hidden md:flex items-center gap-8 pr-2">

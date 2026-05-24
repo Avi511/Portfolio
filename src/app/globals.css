@@ -19,13 +19,15 @@ body {
 }
 
 .glow-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, rgba(255, 60, 0, 0.6) 0%, rgba(0,0,0,0) 60%);
+  background-color: #060608;
+  background-image: 
+    radial-gradient(circle at 10% 25%, rgba(35, 95, 105, 0.28) 0%, transparent 55%),
+    radial-gradient(circle at 90% 20%, rgba(120, 38, 48, 0.32) 0%, transparent 55%);
   z-index: -1;
   pointer-events: none;
 }

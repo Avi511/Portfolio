@@ -9,8 +9,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Echelon Agency",
-  description: "Digital Agency Portfolio",
+  title: "Avishka Ishan | Portfolio",
+  description: "Personal Portfolio of Avishka Ishan Medagamagodage, Software Engineering undergraduate.",
 };
 
 export default function RootLayout({

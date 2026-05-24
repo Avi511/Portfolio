@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-black text-white pt-24 pb-12 px-8 md:px-16 rounded-t-[3rem] -mt-[3rem] z-30 flex flex-col justify-between overflow-hidden">
+    <footer className="relative w-full bg-transparent text-white pt-24 pb-12 px-8 md:px-16 rounded-t-[3rem] -mt-[3rem] z-30 flex flex-col justify-between overflow-hidden border-t border-white/10">
       
       <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-7xl mx-auto gap-16 mb-32">
         {/* Left: Outline Text */}
         <div className="flex flex-col leading-none">
           <h2 className="text-[5rem] md:text-[7rem] font-black tracking-widest text-transparent" style={{ WebkitTextStroke: '2px white' }}>
-            ECHELON
+            AVISHKA
           </h2>
           <h2 className="text-[5rem] md:text-[7rem] font-black tracking-widest text-transparent" style={{ WebkitTextStroke: '2px white' }}>
-            AGENCY
+            ISHAN
           </h2>
         </div>
 
@@ -18,21 +18,17 @@ export default function Footer() {
           {/* Social */}
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-xs tracking-widest uppercase mb-2">Social</h4>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Instagram</a>
+            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">GitHub</a>
+            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">LinkedIn</a>
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Facebook</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Artstation</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">DeviantArt</a>
+            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Instagram</a>
           </div>
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-xs tracking-widest uppercase mb-2">Contact</h4>
-            <a href="mailto:hello@echelon.agency" className="text-gray-400 hover:text-white text-sm transition-colors">hello@echelon.agency</a>
-            <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
-            <span className="text-gray-400 text-sm leading-relaxed">
-              123 Creative Lane, Suite 42<br/>
-              Design City, CA 90210
-            </span>
+            <a href="mailto:avishkaishan@gmail.com" className="text-gray-400 hover:text-white text-sm transition-colors">avishkaishan@gmail.com</a>
+            <span className="text-gray-400 text-sm">Kandy, Sri Lanka</span>
           </div>
         </div>
       </div>
