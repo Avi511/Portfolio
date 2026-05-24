@@ -2,7 +2,7 @@ import { FiGithub, FiLinkedin, FiFacebook, FiInstagram, FiMail } from "react-ico
 
 export default function SocialSidebar() {
   return (
-    <div className="flex flex-col gap-4 px-8 justify-center h-full absolute left-0 top-0 bottom-0 z-30">
+    <div className="flex flex-col gap-4 px-8 justify-center h-screen fixed left-0 top-0 z-30 pointer-events-none [&>*]:pointer-events-auto">
       <button className="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center hover:bg-white/20 transition-colors backdrop-blur-md border border-white/10 group">
         <FiGithub className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
       </button>

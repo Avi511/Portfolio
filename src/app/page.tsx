@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import SocialSidebar from "@/components/SocialSidebar";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
 
 export default function Home() {
   return (
@@ -11,10 +13,12 @@ export default function Home() {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="relative z-10 flex-1 flex w-full overflow-hidden">
+      <main className="relative z-10 flex w-full flex-col">
         <SocialSidebar />
         
         <HeroSection />
+        <AboutSection />
+        <SkillsSection />
       </main>
     </div>
   );
