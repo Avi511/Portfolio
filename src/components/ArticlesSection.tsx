@@ -44,8 +44,8 @@ export default function ArticlesSection() {
       </div>
 
       {/* Marquee Row 1 */}
-      <div 
-        className="flex whitespace-nowrap w-full relative z-10 mb-8" 
+      <div
+        className="flex whitespace-nowrap w-full relative z-10 mb-8"
         style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
       >
         <div className="flex animate-marquee gap-8 w-max px-4 hover:[animation-play-state:paused]">
@@ -62,8 +62,8 @@ export default function ArticlesSection() {
       </div>
 
       {/* Marquee Row 2 (Reverse) */}
-      <div 
-        className="flex whitespace-nowrap w-full relative z-10" 
+      <div
+        className="flex whitespace-nowrap w-full relative z-10"
         style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
       >
         <div className="flex animate-marquee-reverse gap-8 w-max px-4 hover:[animation-play-state:paused]">

@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full bg-black flex flex-col font-outfit">
+    <div className="relative min-h-screen w-full bg-black flex flex-col font-paytone">
       {/* Background Glow */}
       <div className="glow-bg"></div>
 

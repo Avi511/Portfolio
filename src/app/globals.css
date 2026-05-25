@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --font-outfit: var(--font-outfit);
+  --font-paytone: var(--font-paytone);
 }
 
 html {

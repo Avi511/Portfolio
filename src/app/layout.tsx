@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Paytone_One } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const paytone = Paytone_One({
+  variable: "--font-paytone",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} dark antialiased`}>
-      <body className="bg-black text-white font-outfit overflow-x-hidden">
+    <html lang="en" className={`${paytone.variable} dark antialiased`}>
+      <body className="bg-black text-white font-paytone overflow-x-hidden">
         {children}
       </body>
     </html>

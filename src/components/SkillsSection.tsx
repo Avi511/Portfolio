@@ -1,10 +1,10 @@
 "use client";
 
-import { 
-  FaHtml5, FaCss3Alt, FaJs, FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker, FaLinux 
+import {
+  FaHtml5, FaCss3Alt, FaJs, FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker, FaLinux
 } from "react-icons/fa";
-import { 
-  SiTypescript, SiPhp, SiC, SiNextdotjs, SiSpringboot, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiPostman 
+import {
+  SiTypescript, SiPhp, SiC, SiNextdotjs, SiSpringboot, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiPostman
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { useRef, useState, useEffect } from "react";
@@ -99,11 +99,11 @@ export default function SkillsSection() {
       <div ref={sectionRef} className="relative h-[220vh] w-full bg-transparent">
         {/* Sticky viewport container - starts aligned to left to prevent initial clipping */}
         <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-start overflow-hidden px-6 md:px-20">
-          
+
           {/* Main Arsenal Container (Tech Arsenal box) */}
-          <div 
+          <div
             className="horizontal-track flex flex-col gap-6 md:gap-8 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-blue-500/20 bg-[#07080b]/70 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-            style={{ 
+            style={{
               transform: `translateX(${translateX}px)`,
               transition: 'transform 0.1s ease-out'
             }}
@@ -127,24 +127,24 @@ export default function SkillsSection() {
                     </h3>
                     <div className="h-[1px] bg-white/10 flex-grow min-w-[200px]" />
                   </div>
-                  
+
                   {/* Horizontal Cards Row */}
                   <div className="flex flex-row gap-4 md:gap-6">
                     {category.skills.map((skill, index) => {
                       const Icon = skill.icon;
                       return (
-                        <div 
+                        <div
                           key={index}
                           className="group relative flex flex-col justify-between p-4 md:p-5 w-44 h-24 sm:w-48 sm:h-26 md:w-56 md:h-30 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-300 cursor-pointer shadow-lg hover:-translate-y-1 shrink-0 overflow-hidden"
                         >
                           {/* Ambient glow matching brand color */}
-                          <div 
+                          <div
                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                             style={{
                               background: `radial-gradient(circle at 10% 10%, ${skill.color}15 0%, transparent 60%)`
                             }}
                           />
-                          
+
                           {/* Top: Icon & Name */}
                           <div className="flex items-center gap-3">
                             <div className="text-2xl sm:text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110 shrink-0" style={{ color: skill.color }}>
@@ -160,11 +160,11 @@ export default function SkillsSection() {
                               <span style={{ color: skill.color }}>{skill.level}%</span>
                             </div>
                             <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-                              <div 
-                                className="h-full rounded-full transition-all duration-1000" 
-                                style={{ 
-                                  width: `${skill.level}%`, 
-                                  backgroundColor: skill.color 
+                              <div
+                                className="h-full rounded-full transition-all duration-1000"
+                                style={{
+                                  width: `${skill.level}%`,
+                                  backgroundColor: skill.color
                                 }}
                               />
                             </div>
