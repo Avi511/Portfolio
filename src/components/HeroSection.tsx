@@ -14,51 +14,8 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-full flex flex-col justify-between bg-[#0C0C0C] overflow-hidden px-6 md:px-10 pb-7 sm:pb-8 md:pb-10">
-      {/* Navbar fades in with delay 0, y -20 */}
-      <FadeIn delay={0} y={-20} duration={0.8} as="div" className="w-full">
-        <nav className="flex justify-between items-center w-full pt-6 md:pt-8 font-medium uppercase tracking-wider text-[#D7E2EA] text-sm md:text-lg lg:text-[1.4rem] select-none">
-          <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollTo("about");
-            }}
-            className="hover:opacity-70 transition-opacity duration-200"
-          >
-            About
-          </a>
-          <a
-            href="#services"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollTo("services");
-            }}
-            className="hover:opacity-70 transition-opacity duration-200"
-          >
-            Price
-          </a>
-          <a
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollTo("projects");
-            }}
-            className="hover:opacity-70 transition-opacity duration-200"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollTo("about"); // The about section has contact button at the bottom
-            }}
-            className="hover:opacity-70 transition-opacity duration-200"
-          >
-            Contact
-          </a>
-        </nav>
-      </FadeIn>
+      {/* Top spacing to account for fixed global Navbar */}
+      <div className="w-full pt-16 md:pt-20"></div>
 
       {/* Hero Portrait - Centered absolutely */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 pointer-events-none">
