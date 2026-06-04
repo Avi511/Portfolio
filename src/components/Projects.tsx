@@ -91,7 +91,7 @@ const ProjectCard = ({ project }: { project: any }) => (
   <div className="w-[280px] md:w-[400px] lg:w-[450px] shrink-0 rounded-2xl bg-[#121212] border border-white/10 overflow-hidden group relative hover:border-white/30 transition-colors shadow-lg">
     <div className={`w-full h-56 md:h-72 bg-gradient-to-br ${project.gradient} p-6 flex flex-col justify-end relative overflow-hidden`}>
       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
-      
+
       <div className="relative z-10 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
         <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
           {project.title}
@@ -150,20 +150,16 @@ export default function Projects() {
         <div className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-4 uppercase text-center md:text-left z-10 w-full">
           MY PROJECTS
         </div>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-12 text-center md:text-left">
-          Featured Work
-        </h2>
-
-        <div 
+        <div
           className="relative w-full flex flex-col gap-6 py-4 overflow-hidden"
-          style={{ 
-            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', 
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' 
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
           }}
         >
           {/* Row 1 (Scrolling Left) */}
           <ScrollingRow projectsList={projects.slice(0, 5)} duration={40} />
-          
+
           {/* Row 2 (Scrolling Right) */}
           <ScrollingRow projectsList={projects.slice(5, 10)} duration={45} reverse />
         </div>
