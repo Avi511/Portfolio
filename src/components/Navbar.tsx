@@ -49,20 +49,21 @@ export default function Navbar() {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Blog', href: '#blog' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-[5%] md:px-[10%] py-4 md:py-5 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent border-transparent'}`}>
-      <div className="text-[1.8rem] font-extrabold tracking-[0.5px]">A.Ishan</div>
-      
+      <div className="text-[1.8rem] font-extrabold tracking-[0.5px]">Avishka.</div>
+
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-10 list-none m-0 p-0">
         {navLinks.map((link) => {
           const isActive = activeSection === link.href.substring(1);
           return (
             <li key={link.name}>
-              <Link 
-                href={link.href} 
+              <Link
+                href={link.href}
                 className={`pb-1 text-[0.9rem] font-medium transition-colors duration-300 ${isActive ? 'text-foreground border-b-2 border-primary' : 'text-muted hover:text-foreground'}`}
               >
                 {link.name}
@@ -71,10 +72,6 @@ export default function Navbar() {
           );
         })}
       </ul>
-      <div className="hidden md:flex items-center gap-8">
-        <button className="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded text-[0.8rem] font-bold uppercase tracking-[0.5px] transition-colors duration-300 cursor-pointer border-none">LET'S TALK</button>
-      </div>
-
       {/* Mobile Menu Button */}
       <button className="md:hidden bg-transparent border-none cursor-pointer text-foreground z-[100]" onClick={toggleMenu} aria-label="Toggle menu">
         {isOpen ? (
@@ -98,9 +95,9 @@ export default function Navbar() {
             const isActive = activeSection === link.href.substring(1);
             return (
               <li key={link.name}>
-                <Link 
-                  href={link.href} 
-                  className={`pb-1 text-[1.5rem] font-medium transition-colors ${isActive ? 'text-foreground border-b-2 border-primary' : 'text-muted hover:text-foreground'}`} 
+                <Link
+                  href={link.href}
+                  className={`pb-1 text-[1.5rem] font-medium transition-colors ${isActive ? 'text-foreground border-b-2 border-primary' : 'text-muted hover:text-foreground'}`}
                   onClick={closeMenu}
                 >
                   {link.name}
@@ -109,9 +106,6 @@ export default function Navbar() {
             );
           })}
         </ul>
-        <div className="flex flex-col gap-6">
-          <button className="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded text-[0.8rem] font-bold uppercase tracking-[0.5px] transition-colors duration-300 cursor-pointer border-none" onClick={closeMenu}>LET'S TALK</button>
-        </div>
       </div>
     </nav>
   );

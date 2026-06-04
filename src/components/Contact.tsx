@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
+import { FiMail, FiMapPin, FiGithub, FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { FaMedium } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -26,7 +27,7 @@ export default function Contact() {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary shrink-0">
-                  <FaEnvelope size={22} />
+                  <FiMail size={22} />
                 </div>
                 <div>
                   <div className="text-sm text-white/50 mb-1">Email</div>
@@ -36,7 +37,7 @@ export default function Contact() {
 
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary shrink-0">
-                  <FaMapMarkerAlt size={22} />
+                  <FiMapPin size={22} />
                 </div>
                 <div>
                   <div className="text-sm text-white/50 mb-1">Location</div>
@@ -48,19 +49,19 @@ export default function Contact() {
             <div className="mt-8 pt-8 border-t border-white/10">
               <h4 className="text-white font-semibold mb-6 text-lg">Follow Me</h4>
               <div className="flex gap-4 flex-wrap">
-                <a href="#" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-white hover:border-white transition-all shadow-lg" title="GitHub">
-                  <FaGithub size={22} />
+                <a href="https://github.com/Avi511" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-white hover:border-white transition-all shadow-lg" title="GitHub">
+                  <FiGithub size={22} />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#1877F2] hover:border-[#1877F2] transition-all shadow-lg" title="Facebook">
-                  <FaFacebook size={22} />
+                <a href="https://www.facebook.com/profile.php?id=61550771686888" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#1877F2] hover:border-[#1877F2] transition-all shadow-lg" title="Facebook">
+                  <FiFacebook size={22} />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#E4405F] hover:border-[#E4405F] transition-all shadow-lg" title="Instagram">
-                  <FaInstagram size={22} />
+                <a href="https://www.instagram.com/avishka.ish/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#E4405F] hover:border-[#E4405F] transition-all shadow-lg" title="Instagram">
+                  <FiInstagram size={22} />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#0A66C2] hover:border-[#0A66C2] transition-all shadow-lg" title="LinkedIn">
-                  <FaLinkedin size={22} />
+                <a href="https://www.linkedin.com/in/avishka-medagamagodage-01a0292aa/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#0A66C2] hover:border-[#0A66C2] transition-all shadow-lg" title="LinkedIn">
+                  <FiLinkedin size={22} />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#00AB6C] hover:border-[#00AB6C] transition-all shadow-lg" title="Medium">
+                <a href="https://medium.com/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#00AB6C] hover:border-[#00AB6C] transition-all shadow-lg" title="Medium">
                   <FaMedium size={22} />
                 </a>
               </div>

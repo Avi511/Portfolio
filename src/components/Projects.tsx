@@ -7,106 +7,104 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with Next.js, Stripe, and Tailwind CSS. Features seamless checkout and responsive design.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#4facfe] to-[#00f2fe]",
+    title: "HealthSync",
+    description: "Healthcare management system with appointment scheduling and patient records.",
+    github: "https://github.com/Avi511/HealthSync",
+    image: "/Projects/HealthSync.png",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Kanban board application built with React, Node.js, and MongoDB. Includes real-time collaboration and drag-and-drop.",
+    title: "Readify",
+    description: "Book tracking and reading application.",
     github: "#",
-    live: "#",
-    gradient: "from-[#43e97b] to-[#38f9d7]",
+    image: "/Projects/Readify.png",
   },
   {
     id: 3,
-    title: "AI Image Generator",
-    description: "SaaS platform for generating images using OpenAI API and Next.js. Integrates automated billing and user auth.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#fa709a] to-[#fee140]",
+    title: "Prime Supermarket",
+    description: "E-commerce platform for a supermarket chain.",
+    github: "https://github.com/Avi511/PrimeSupermarket",
+    live: "https://primesupermarket.netlify.app",
+    image: "/Projects/Prime Supermarket.png",
   },
   {
     id: 4,
-    title: "Crypto Dashboard",
-    description: "Real-time cryptocurrency tracking dashboard using WebSockets, Chart.js, and React.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#ff0844] to-[#ffb199]",
+    title: "ExpoHub",
+    description: "Event management and exhibition platform.",
+    github: "https://github.com/Avi511/bookfair-stall-reservation-system",
+    image: "/Projects/ExpoHub.png",
   },
   {
     id: 5,
-    title: "Social Media Clone",
-    description: "Fully functional social network with real-time chat, notifications, and post sharing.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#a18cd1] to-[#fbc2eb]",
+    title: "TEDx UoK",
+    description: "Official website for TEDx University of Kelaniya.",
+    github: "https://github.com/Avi511/TEDx-UOK-Avishka",
+    live: "https://tedxuok.org",
+    image: "/Projects/TEDx UoK.png",
   },
   {
     id: 6,
-    title: "Portfolio Template",
-    description: "Minimalist, highly customizable developer portfolio template optimized for SEO and performance.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#30cfd0] to-[#330867]",
+    title: "Lane Drift Survival",
+    description: "A fast-paced endless survival game.",
+    github: "https://github.com/Avi511/Lane-Drift-Survival",
+    live: "https://avi511.github.io/Lane-Drift-Survival",
+    image: "/Projects/LaneDriftSurvival.png",
   },
   {
     id: 7,
-    title: "Fitness Tracker",
-    description: "Mobile-first web app to track workouts and nutrition with data visualization features.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#0ba360] to-[#3cba92]",
+    title: "Chat Pad",
+    description: "Real-time chat application with group messaging.",
+    github: "https://github.com/Avi511/Chat_Application",
+    live: "https://chat-application-pi-rouge.vercel.app",
+    image: "/Projects/Chat Pad.png",
   },
   {
     id: 8,
-    title: "Weather App",
-    description: "Beautiful weather forecasting app with interactive maps and predictive weather patterns.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#00c6fb] to-[#005bea]",
+    title: "Élan Fragrance",
+    description: "Luxurious online fragrance store.",
+    github: "https://github.com/Avi511/Elanfragrance",
+    live: "https://elanfragrance.vercel.app",
+    image: "/Projects/Élan Fragrance.png",
   },
   {
     id: 9,
-    title: "Recipe Finder",
-    description: "Search and save recipes based on ingredients. Built with React and Spoonacular API.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#f6d365] to-[#fda085]",
+    title: "Portfolio",
+    description: "My personal developer portfolio website.",
+    github: "https://github.com/Avi511/Portfolio",
+    live: "https://avishkaishan.vercel.app",
+    image: "/Projects/Portfolio.png",
   },
   {
     id: 10,
-    title: "Blog CMS",
-    description: "Headless CMS blog using Next.js, Tailwind, and Sanity.io. Features markdown support and fast loading.",
-    github: "#",
-    live: "#",
-    gradient: "from-[#f5576c] to-[#f093fb]",
+    title: "CivicSense",
+    description: "Community-driven issue reporting and civic engagement platform. - Hackathon Project",
+    github: "https://github.com/Team-nova-04/JH",
+    live: "https://civicsense-tau.vercel.app",
+    image: "/Projects/CivicSense.png",
   },
 ];
 
 const ProjectCard = ({ project }: { project: any }) => (
-  <div className="w-[280px] md:w-[400px] lg:w-[450px] shrink-0 rounded-2xl bg-[#121212] border border-white/10 overflow-hidden group relative hover:border-white/30 transition-colors shadow-lg">
-    <div className={`w-full h-56 md:h-72 bg-gradient-to-br ${project.gradient} p-6 flex flex-col justify-end relative overflow-hidden`}>
-      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+  <div className="w-[280px] md:w-[400px] lg:w-[450px] shrink-0 rounded-2xl bg-[#121212] border border-white/10 overflow-hidden group relative hover:border-white/30 transition-colors shadow-lg flex flex-col self-center">
+    <div className="relative w-full aspect-video overflow-hidden bg-[#1a1a1a]">
+      <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"></div>
 
-      <div className="relative z-10 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-        <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end z-10">
+        <h3 className="text-lg md:text-xl font-semibold text-white mb-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
           {project.title}
         </h3>
-        <p className="text-white/90 text-sm md:text-base line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+        <p className="text-white/90 text-xs md:text-sm line-clamp-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
           {project.description}
         </p>
       </div>
 
       {/* Action Buttons overlay */}
-      <div className="absolute top-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 translate-y-[-10px] group-hover:translate-y-0">
-        <a href={project.github} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all shadow-lg" title="View Source">
+      <div className="absolute top-4 right-4 flex gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 z-20 md:-translate-y-2 md:group-hover:translate-y-0">
+        <a href={project.github} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="View Source">
           <FaGithub size={18} />
         </a>
-        <a href={project.live} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all shadow-lg" title="Live Preview">
+        <a href={project.live} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="Live Preview">
           <FaExternalLinkAlt size={16} />
         </a>
       </div>
@@ -114,19 +112,33 @@ const ProjectCard = ({ project }: { project: any }) => (
   </div>
 );
 
+const scrollStyles = `
+  @keyframes scroll-left {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(-50% - 12px)); }
+  }
+  @keyframes scroll-right {
+    0% { transform: translateX(calc(-50% - 12px)); }
+    100% { transform: translateX(0%); }
+  }
+  .animate-scroll-left {
+    animation: scroll-left linear infinite;
+  }
+  .animate-scroll-right {
+    animation: scroll-right linear infinite;
+  }
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+`;
+
 const ScrollingRow = ({ projectsList, duration, reverse = false }: { projectsList: any[], duration: number, reverse?: boolean }) => {
   return (
     <div className="flex relative w-full overflow-hidden">
-      <motion.div
-        animate={{
-          x: reverse ? ["calc(-50% - 12px)", "0%"] : ["0%", "calc(-50% - 12px)"],
-        }}
-        transition={{
-          duration: duration,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="flex gap-6 w-max"
+      <style>{scrollStyles}</style>
+      <div
+        className={`flex gap-6 w-max pause-on-hover ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}
+        style={{ animationDuration: `${duration}s` }}
       >
         <div className="flex gap-6 w-max">
           {projectsList.map((project, idx) => (
@@ -138,7 +150,7 @@ const ScrollingRow = ({ projectsList, duration, reverse = false }: { projectsLis
             <ProjectCard key={`second-${project.id}-${idx}`} project={project} />
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
@@ -146,7 +158,7 @@ const ScrollingRow = ({ projectsList, duration, reverse = false }: { projectsLis
 export default function Projects() {
   return (
     <section id="projects" className="relative px-[5%] md:px-[10%] pt-32 pb-20 min-h-screen flex flex-col z-[1] justify-center">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -164,10 +176,10 @@ export default function Projects() {
           }}
         >
           {/* Row 1 (Scrolling Left) */}
-          <ScrollingRow projectsList={projects.slice(0, 5)} duration={40} />
+          <ScrollingRow projectsList={projects.slice(0, 5)} duration={80} />
 
           {/* Row 2 (Scrolling Right) */}
-          <ScrollingRow projectsList={projects.slice(5, 10)} duration={45} reverse />
+          <ScrollingRow projectsList={projects.slice(5, 10)} duration={85} reverse />
         </div>
       </motion.div>
     </section>
