@@ -48,13 +48,16 @@ export default function Navbar() {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Blog', href: '#articles' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-[5%] md:px-[10%] py-4 md:py-5 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent border-transparent'}`}>
-      <div className="text-[1.8rem] font-extrabold tracking-[0.5px]">Avishka.</div>
+      <div className="flex items-baseline gap-2">
+        <div className="text-[1.8rem] font-extrabold tracking-[0.5px]">Avishka.</div>
+        <span className="text-[0.75rem] font-normal text-white/40 tracking-normal">Version01</span>
+      </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-10 list-none m-0 p-0">

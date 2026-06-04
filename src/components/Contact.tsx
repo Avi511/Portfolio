@@ -61,7 +61,7 @@ export default function Contact() {
                 <a href="https://www.linkedin.com/in/avishka-medagamagodage-01a0292aa/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#0A66C2] hover:border-[#0A66C2] transition-all shadow-lg" title="LinkedIn">
                   <FiLinkedin size={22} />
                 </a>
-                <a href="https://medium.com/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#00AB6C] hover:border-[#00AB6C] transition-all shadow-lg" title="Medium">
+                <a href="https://medium.com/@aimedagamagodage2003" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center text-white hover:text-[#00AB6C] hover:border-[#00AB6C] transition-all shadow-lg" title="Medium">
                   <FaMedium size={22} />
                 </a>
               </div>

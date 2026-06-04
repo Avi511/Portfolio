@@ -16,7 +16,7 @@ const projects = [
     id: 2,
     title: "Readify",
     description: "Book tracking and reading application.",
-    github: "#",
+    github: "https://github.com/BookNest-2025/BookNest",
     image: "/Projects/Readify.png",
   },
   {
@@ -101,12 +101,16 @@ const ProjectCard = ({ project }: { project: any }) => (
 
       {/* Action Buttons overlay */}
       <div className="absolute top-4 right-4 flex gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 z-20 md:-translate-y-2 md:group-hover:translate-y-0">
-        <a href={project.github} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="View Source">
-          <FaGithub size={18} />
-        </a>
-        <a href={project.live} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="Live Preview">
-          <FaExternalLinkAlt size={16} />
-        </a>
+        {project.github && project.github !== "#" && (
+          <a href={project.github} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="View Source">
+            <FaGithub size={18} />
+          </a>
+        )}
+        {project.live && project.live !== "#" && (
+          <a href={project.live} className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-lg" title="Live Preview">
+            <FaExternalLinkAlt size={16} />
+          </a>
+        )}
       </div>
     </div>
   </div>
