@@ -146,7 +146,13 @@ const ScrollingRow = ({ projectsList, duration, reverse = false }: { projectsLis
 export default function Projects() {
   return (
     <section id="projects" className="relative px-[5%] md:px-[10%] pt-32 pb-20 min-h-screen flex flex-col z-[1] justify-center">
-      <div className="w-full max-w-[1600px] mx-auto flex flex-col flex-1 relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-[1600px] mx-auto flex flex-col flex-1 relative"
+      >
         <div className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-4 uppercase text-center md:text-left z-10 w-full">
           MY PROJECTS
         </div>
@@ -163,7 +169,7 @@ export default function Projects() {
           {/* Row 2 (Scrolling Right) */}
           <ScrollingRow projectsList={projects.slice(5, 10)} duration={45} reverse />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

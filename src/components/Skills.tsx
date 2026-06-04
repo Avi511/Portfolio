@@ -59,7 +59,13 @@ export default function Skills() {
       id="skills"
       className="relative px-[5%] md:px-[10%] pt-32 pb-20 min-h-screen flex flex-col z-[1] overflow-hidden"
     >
-      <div className="w-full flex flex-col justify-center flex-1 relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="w-full flex flex-col justify-center flex-1 relative"
+      >
         <div className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-8 md:mb-12 uppercase text-left z-10">
           MY SKILLS
         </div>
@@ -158,7 +164,7 @@ export default function Skills() {
             })}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const articles = [
   {
@@ -61,7 +62,13 @@ const ArticleCard = ({ article }: { article: any }) => (
 export default function Articles() {
   return (
     <section id="articles" className="relative px-[5%] md:px-[10%] pt-20 pb-32 flex flex-col z-[1]">
-      <div className="w-full max-w-[1400px] mx-auto flex flex-col relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-[1400px] mx-auto flex flex-col relative"
+      >
         <div className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-4 uppercase text-center md:text-left z-10 w-full">
           MY ARTICLES
         </div>
@@ -71,7 +78,7 @@ export default function Articles() {
             <ArticleCard key={article.id} article={article} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
