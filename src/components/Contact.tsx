@@ -79,7 +79,6 @@ export default function Contact() {
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="John Doe"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 />
@@ -91,7 +90,6 @@ export default function Contact() {
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="john@example.com"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 />
@@ -104,26 +102,19 @@ export default function Contact() {
                   name="message"
                   rows={5}
                   required
-                  placeholder="How can I help you?"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary text-black font-bold text-lg rounded-xl px-4 py-4 mt-2 hover:bg-white transition-colors shadow-lg shadow-primary/20"
+                className="w-full bg-white text-black font-bold text-lg rounded-xl px-4 py-4 mt-2 hover:bg-primary hover:text-white transition-colors "
               >
                 Send Message
               </button>
             </form>
           </div>
 
-        </div>
-
-        {/* Footer */}
-        <div className="w-full mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/50 text-sm">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-          <p>Built with Next.js & Tailwind CSS.</p>
         </div>
       </div>
     </section>
