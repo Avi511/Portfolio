@@ -161,7 +161,7 @@ const ScrollingRow = ({ projectsList, duration, reverse = false }: { projectsLis
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative px-[5%] md:px-[10%] pt-32 pb-20 min-h-screen flex flex-col z-[1] justify-center">
+    <section id="projects" className="relative px-[5%] md:px-[10%] pt-16 pb-12 md:pt-32 md:pb-20 min-h-screen flex flex-col z-[1] justify-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

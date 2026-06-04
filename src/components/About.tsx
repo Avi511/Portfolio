@@ -85,7 +85,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="relative px-[5%] md:px-[10%] py-20 min-h-screen flex items-center z-[1]">
+    <section id="about" className="relative px-[5%] md:px-[10%] py-12 md:py-20 min-h-screen flex items-center z-[1]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 w-full">
         {/* Left Column: Text Content */}
         <div className="flex flex-col justify-center">

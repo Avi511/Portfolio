@@ -57,7 +57,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative px-[5%] md:px-[10%] pt-32 pb-20 min-h-screen flex flex-col z-[1] overflow-hidden"
+      className="relative px-[5%] md:px-[10%] pt-16 pb-12 md:pt-32 md:pb-20 min-h-screen flex flex-col z-[1] overflow-hidden"
     >
       <motion.div 
         initial={{ opacity: 0, y: 50 }}

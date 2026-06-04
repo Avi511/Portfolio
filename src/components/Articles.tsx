@@ -56,7 +56,7 @@ const ArticleCard = ({ article }: { article: any }) => (
 
 export default function Articles() {
   return (
-    <section id="articles" className="relative px-[5%] md:px-[10%] pt-20 pb-32 flex flex-col z-[1]">
+    <section id="articles" className="relative px-[5%] md:px-[10%] pt-12 pb-16 md:pt-20 md:pb-32 flex flex-col z-[1]">
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

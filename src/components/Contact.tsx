@@ -6,7 +6,7 @@ import { FaMedium } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative px-[5%] md:px-[10%] pt-20 pb-12 flex flex-col z-[1] bg-[#0a0a0a]">
+    <section id="contact" className="relative px-[5%] md:px-[10%] pt-12 pb-8 md:pt-20 md:pb-12 flex flex-col z-[1] bg-[#0a0a0a]">
       <div className="w-full max-w-[1400px] mx-auto flex flex-col relative">
         <div className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-4 uppercase text-center md:text-left z-10 w-full">
           GET IN TOUCH
