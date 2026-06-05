@@ -22,7 +22,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://avishkaishan.vercel.app'),
   title: "Avishka Medagamagodage | Portfolio",
-  description: "Personal developer portfolio of Avishka Medagamagodage, showcasing my projects, skills, and articles.",
+  description: "I am Avishka Medagamagodage, Software Engineering Undergraduate.Showcasing my projects, skills, and articles.",
   keywords: ["Avishka Medagamagodage", "Software Engineer", "Full Stack Developer", "Web Developer", "Portfolio", "React", "Next.js"],
   authors: [{ name: "Avishka Medagamagodage", url: "https://avishkaishan.vercel.app" }],
   creator: "Avishka Medagamagodage",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://avishkaishan.vercel.app",
     title: "Avishka Medagamagodage | Portfolio",
-    description: "Personal developer portfolio of Avishka Medagamagodage, showcasing my projects, skills, and articles.",
+    description: "I am Avishka Medagamagodage, Software Engineering Undergraduate.Showcasing my projects, skills, and articles.",
     siteName: "Avishka Medagamagodage Portfolio",
   },
   twitter: {
