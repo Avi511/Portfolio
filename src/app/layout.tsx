@@ -20,8 +20,28 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://avishkaishan.vercel.app'),
   title: "Avishka Medagamagodage | Portfolio",
-  description: "Personal developer portfolio of Avishka Medagamagodage",
+  description: "Personal developer portfolio of Avishka Medagamagodage, showcasing my projects, skills, and articles.",
+  keywords: ["Avishka Medagamagodage", "Software Engineer", "Full Stack Developer", "Web Developer", "Portfolio", "React", "Next.js"],
+  authors: [{ name: "Avishka Medagamagodage", url: "https://avishkaishan.vercel.app" }],
+  creator: "Avishka Medagamagodage",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://avishkaishan.vercel.app",
+    title: "Avishka Medagamagodage | Portfolio",
+    description: "Personal developer portfolio of Avishka Medagamagodage, showcasing my projects, skills, and articles.",
+    siteName: "Avishka Medagamagodage Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Avishka Medagamagodage | Portfolio",
+    description: "Personal developer portfolio of Avishka Medagamagodage, showcasing my projects, skills, and articles.",
+  },
+  alternates: {
+    canonical: "https://avishkaishan.vercel.app",
+  },
 };
 
 export default function RootLayout({
