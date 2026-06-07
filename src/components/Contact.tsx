@@ -1,10 +1,44 @@
 "use client";
 
-import React from "react";
-import { FiMail, FiMapPin, FiGithub, FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiMail, FiMapPin, FiGithub, FiFacebook, FiInstagram, FiLinkedin, FiCheckCircle } from "react-icons/fi";
 import { FaMedium } from "react-icons/fa";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/aimedagamagodage2003@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        form.reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative px-[5%] md:px-[10%] pt-12 pb-8 md:pt-20 md:pb-12 flex flex-col z-[1] bg-[#0a0a0a]">
       <div className="w-full max-w-[1400px] mx-auto flex flex-col relative">
@@ -71,7 +105,20 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-[#121212] border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl">
             <h3 className="text-2xl font-bold text-white mb-8">Send me a message</h3>
-            <form action="https://formsubmit.co/aimedagamagodage2003@gmail.com" method="POST" className="flex flex-col gap-6">
+            {submitStatus === 'success' ? (
+              <div className="flex flex-col items-center justify-center py-10 bg-white/5 border border-primary/30 rounded-2xl text-center">
+                <FiCheckCircle className="text-primary mb-4" size={48} />
+                <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
+                <p className="text-white/70 mb-6">Thank you for reaching out. I'll get back to you soon.</p>
+                <button 
+                  onClick={() => setSubmitStatus('idle')}
+                  className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors text-sm font-medium"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <input type="hidden" name="_subject" value="New contact from your portfolio!" />
               <input type="hidden" name="_captcha" value="false" />
               <div className="flex flex-col gap-2">
@@ -107,13 +154,31 @@ export default function Contact() {
                 ></textarea>
               </div>
 
+              {submitStatus === 'error' && (
+                <div className="text-red-500 text-sm mt-2">
+                  Oops! Something went wrong. Please try again later.
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-white text-black font-bold text-lg rounded-xl px-4 py-4 mt-2 hover:bg-primary hover:text-white transition-colors "
+                disabled={isSubmitting}
+                className="w-full bg-white text-black font-bold text-lg rounded-xl px-4 py-4 mt-2 hover:bg-primary hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
+            )}
           </div>
 
         </div>
