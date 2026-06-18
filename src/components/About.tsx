@@ -148,7 +148,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Projects Card */}
             <MotionDiv variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-white/30 transition-colors shadow-lg">
-              <div className="text-5xl font-bold text-primary mb-2">4+</div>
+              <div className="text-5xl font-bold text-primary mb-2">5+</div>
               <div className="text-sm text-muted">Individual Projects</div>
             </MotionDiv>
           </div>
