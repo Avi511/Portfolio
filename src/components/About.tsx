@@ -4,6 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+const MotionDiv = motion.div;
+const MotionSpan = motion.span;
+
 const text1 = "I am **Avishka Ishan Medagamagodage**, a third-year **Software Engineering undergraduate** at the **University of Kelaniya** from **Kandy**. I am passionate about coding, software development, and continuously learning new technologies. My main interests are **Full-Stack Development** and **Data Science**, and I aspire to build a successful career in these fields.";
 
 const text2 = "I also enjoy designing creative and user-friendly digital experiences, combining technical skills with creativity to develop impactful solutions. I am always eager to take on new challenges, improve my skills, and create innovative projects that solve real-world problems.";
@@ -11,7 +14,7 @@ const text2 = "I also enjoy designing creative and user-friendly digital experie
 const parseText = (text: string) => {
   const words: { text: string; isBold: boolean }[] = [];
   let isBold = false;
-  
+
   text.split(" ").forEach(word => {
     let cleanWord = word;
     let turnBoldOffAfter = false;
@@ -21,14 +24,14 @@ const parseText = (text: string) => {
       turnBoldOnNow = true;
       cleanWord = cleanWord.substring(2);
     }
-    
+
     if (cleanWord.includes("**")) {
       turnBoldOffAfter = true;
       cleanWord = cleanWord.replace("**", "");
     }
 
     if (turnBoldOnNow) isBold = true;
-    
+
     words.push({ text: cleanWord, isBold: isBold });
 
     if (turnBoldOffAfter) isBold = false;
@@ -43,7 +46,7 @@ const totalWords = allWords.length;
 
 const wordVariants = {
   hidden: { opacity: 0.15 },
-  visible: { 
+  visible: {
     opacity: 1,
     transition: { duration: 0.4 }
   }
@@ -52,12 +55,12 @@ const wordVariants = {
 const Word = ({ word }: { word: any }) => {
   return (
     <span className="relative inline-block mr-[0.3em] mb-1">
-      <motion.span 
+      <MotionSpan
         variants={wordVariants}
         className={`transition-colors duration-300 ${word.isBold ? 'text-white font-semibold' : ''}`}
       >
         {word.text}
-      </motion.span>
+      </MotionSpan>
     </span>
   );
 };
@@ -89,7 +92,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 w-full">
         {/* Left Column: Text Content */}
         <div className="flex flex-col justify-center">
-          <motion.div 
+          <MotionDiv
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
@@ -97,9 +100,9 @@ export default function About() {
             className="text-primary font-bold text-[0.85rem] tracking-[1.5px] mb-8 uppercase"
           >
             ABOUT ME
-          </motion.div>
-          
-          <motion.div 
+          </MotionDiv>
+
+          <MotionDiv
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -116,9 +119,9 @@ export default function About() {
                 <Word key={`w2-${i}`} word={word} />
               ))}
             </p>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div
+          <MotionDiv
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
@@ -131,11 +134,11 @@ export default function About() {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
-          </motion.div>
+          </MotionDiv>
         </div>
 
         {/* Right Column: Cards */}
-        <motion.div 
+        <MotionDiv
           variants={cardsContainerVariants}
           initial="hidden"
           whileInView="visible"
@@ -143,21 +146,15 @@ export default function About() {
           className="flex flex-col justify-center gap-6"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* GPA Card */}
-            <motion.div variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-white/30 transition-colors shadow-lg">
-              <div className="text-5xl font-bold text-primary mb-2">3.43</div>
-              <div className="text-sm text-muted">Current GPA</div>
-            </motion.div>
-
             {/* Projects Card */}
-            <motion.div variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-white/30 transition-colors shadow-lg">
+            <MotionDiv variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-white/30 transition-colors shadow-lg">
               <div className="text-5xl font-bold text-primary mb-2">4+</div>
               <div className="text-sm text-muted">Individual Projects</div>
-            </motion.div>
+            </MotionDiv>
           </div>
 
           {/* Volunteering Card */}
-          <motion.div variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-colors shadow-lg">
+          <MotionDiv variants={fadeUpVariants} className="bg-[#121212] border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-colors shadow-lg">
             <div className="flex items-center gap-3 mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -176,8 +173,8 @@ export default function About() {
                 <p className="text-xs text-muted mt-1">IEEE Students' Branch, University of Kelaniya</p>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
       </div>
     </section>
   );
